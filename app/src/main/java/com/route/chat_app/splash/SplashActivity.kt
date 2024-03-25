@@ -22,8 +22,9 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
-import com.route.chat_app.login.LoginActivity
+import androidx.lifecycle.viewmodel.compose.viewModel
 import com.route.chat_app.R
+import com.route.chat_app.login.LoginActivity
 import com.route.chat_app.ui.theme.ChatAppTheme
 
 class SplashActivity : ComponentActivity() {
@@ -40,7 +41,7 @@ class SplashActivity : ComponentActivity() {
 }
 
 @Composable
-fun SplashScreen(viewModel: SplashViewModel = SplashViewModel(), onFinish: () -> Unit) {
+fun SplashScreen(viewModel: SplashViewModel = viewModel(), onFinish: () -> Unit) {
     LaunchedEffect(key1 = Unit) {
         Handler(Looper.getMainLooper()).postDelayed({
             viewModel.navigate()
@@ -79,7 +80,7 @@ fun SplashScreen(viewModel: SplashViewModel = SplashViewModel(), onFinish: () ->
 @Composable
 fun TriggreToLogin(
     events: SplashEvents,
-    viewModel: SplashViewModel = SplashViewModel(),
+    viewModel: SplashViewModel = viewModel(),
     onFinish: () -> Unit
 ) {
     val context = LocalContext.current

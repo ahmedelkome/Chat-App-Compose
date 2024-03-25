@@ -5,4 +5,8 @@
     <string name="title_activity_home">HomeActivity</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="back">Back</string>
+    <string name="welcome_back">Welcome back!</string>
+    <string name="login">Login</string>
+    <string name="or_create_my_account">Or Create My Account</string>
 </resources>
